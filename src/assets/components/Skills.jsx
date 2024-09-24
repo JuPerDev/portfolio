@@ -1,10 +1,13 @@
 import { Icon } from "@iconify/react";
 export const Skills = () => {
   return (
-    <section className='col-span-3 mb-10'>
+    <section
+      id='skills'
+      className='pt-4 sm:col-span-3 flex flex-col justify-center items-center mb-10 h-screen px-6'
+    >
       <div>
-        <h2 className=' text-4xl font-extrabold mb-8'>
-          Tecno<span className='text-rose-500'>logías</span>
+        <h2 className='text-center font-extralight  text-5xl md:text-7xl text-neutral-700 dark:text-slate-50 mb-10'>
+          Tecnologías <span className='text-rose-500'>utilizadas</span>
         </h2>
         <ul className='text-7xl flex flex-wrap justify-center gap-4 light:bg-slate-800 p-2 rounded-xl'>
           <li>

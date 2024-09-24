@@ -2,11 +2,14 @@ import { ProjectCard } from "./ProjectCard/ProjectCard";
 
 export const Projects = () => {
   return (
-    <section className='sm:col-span-3 mb-10'>
-      <h2 className=' text-4xl font-extrabold mb-8'>
+    <section
+      id='projects'
+      className='pt-4 sm:col-span-3 flex flex-col justify-center items-center mb-10 sm:h-screen px-6'
+    >
+      <h2 className=' text-center font-extralight md:text-left text-5xl md:text-7xl text-neutral-700 dark:text-slate-50 mb-10 '>
         Proyectos<span className='text-rose-500'> Realizados</span>
       </h2>
-      <div className='flex flex-wrap justify-around gap-2'>
+      <div className='flex flex-wrap justify-around gap-1 gap-y-6'>
         <ProjectCard
           url='https://www.pascalinapapeleria.cl/'
           title='Pascalina Papelería'
