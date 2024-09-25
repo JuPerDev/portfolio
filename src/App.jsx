@@ -18,7 +18,7 @@ export const App = () => {
         }}
         className='bg-rose-500 fixed left origin-left h-1 top-0 left-0 right-0 z-10'
       />
-      <div className='flex flex-col justify-center items-center gap-8 py-8 md:py-0 sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] md:grid-cols-3'>
+      <div className='flex flex-col justify-center items-center gap-8 md:py-0 sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] md:grid-cols-3'>
         <Banner />
 
         <AboutMe />
