@@ -3,7 +3,7 @@ export const Skills = () => {
   return (
     <section
       id='skills'
-      className='sm:col-span-3 flex flex-col justify-center items-center mb-10 h-screen px-6'
+      className=' sm:col-span-3 flex flex-col justify-center items-center mb-10 h-screen px-6'
     >
       <div>
         <h2 className='text-center font-extralight  text-5xl md:text-7xl text-neutral-700 dark:text-slate-50 mb-10'>

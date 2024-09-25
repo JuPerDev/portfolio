@@ -1,6 +1,5 @@
 import { AboutMe } from "./assets/components/AboutMe";
 import { Banner } from "./assets/components/Banner";
-import { ChangeTheme } from "./assets/components/ChangeTheme";
 import { Footer } from "./assets/components/Footer";
 import { NavBar } from "./assets/components/NavBar";
 import { Projects } from "./assets/components/Projects";

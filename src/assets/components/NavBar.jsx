@@ -1,11 +1,23 @@
 import { ChangeTheme } from "./ChangeTheme";
 
 export const NavBar = () => {
+  const handleScroll = (sectionID) => {
+    const targetSection = document.querySelector(sectionID);
+
+    targetSection.scrollIntoView({ behavior: "smooth" });
+
+    window.history.pushState(null, null, " ");
+  };
+
   return (
     <div className='fixed bottom-2 left-0 right-0 mx-auto'>
       <nav>
         <div className='min-w-[300px] max-w-[300px] flex items-center justify-center gap-2  px-4 py-1 rounded-full bg-slate-500/15 backdrop-blur-sm mx-auto'>
-          <a href='#home' className='text-3xl p-1'>
+          <a
+            href='#home'
+            className='text-3xl p-1'
+            onClick={() => handleScroll("#home")}
+          >
             <i className='ri-home-line'></i>
           </a>
           <a href='#about_me' className='text-3xl p-1'>

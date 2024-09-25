@@ -6,7 +6,7 @@ export const Banner = () => {
   return (
     <section
       id='home'
-      className='flex flex-col md:flex-row-reverse sm:col-span-3 justify-center items-center gap-8 md:justify-evenly h-screen'
+      className='h-screen flex flex-col md:flex-row-reverse sm:col-span-3 justify-center items-center gap-8 md:justify-evenly'
     >
       <img
         src={picPerfil}

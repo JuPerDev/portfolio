@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <section className='sm:col-span-3 text-center mb-10 h-36'>
+    <section className='sm:col-span-3 text-center mb-10 h-36 '>
       <hr className='mb-8 text-slate-700' />
       <h3>
         Portfolio creado por{" "}
