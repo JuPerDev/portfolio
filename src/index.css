@@ -18,3 +18,7 @@ html.dark {
 p {
   margin-bottom: 0.5rem;
 }
+
+.scroll_color {
+  scrollbar-color: #f43f5e rgba(255, 255, 255, 0);
+}
