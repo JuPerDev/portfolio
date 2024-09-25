@@ -6,6 +6,7 @@
 html {
   background-color: #fff;
   transition: background-color 0.3s, color 0.3s;
+  scroll-behavior: smooth;
 }
 
 html.dark {

@@ -20,9 +20,7 @@ export const App = () => {
       />
       <div className='flex flex-col justify-center items-center gap-8 md:py-0 sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] md:grid-cols-3'>
         <Banner />
-
         <AboutMe />
-
         <Skills />
         <Projects />
         <Footer />

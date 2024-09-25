@@ -18,18 +18,16 @@ export const ChangeTheme = () => {
   }, [theme]);
 
   return (
-    <header className='w-90 h-10 col-span-1 sm:col-span-3 dark:text-slate-50  flex justify-end'>
-      <button
-        type='button'
-        onClick={handleChangeTheme}
-        className='cursor-pointer text-3xl'
-      >
-        {theme === "light" ? (
-          <i className='ri-moon-clear-line'></i>
-        ) : (
-          <i className='ri-sun-line'></i>
-        )}
-      </button>
-    </header>
+    <button
+      type='button'
+      onClick={handleChangeTheme}
+      className='cursor-pointer text-3xl pl-2 '
+    >
+      {theme === "light" ? (
+        <i className='ri-moon-clear-line'></i>
+      ) : (
+        <i className='ri-sun-line'></i>
+      )}
+    </button>
   );
 };
