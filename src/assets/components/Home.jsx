@@ -2,7 +2,7 @@ import picPerfil from "/img/foto_perfil.jpeg";
 import TypeIt from "typeit-react";
 import curriculum from "../downloads/curriculum.pdf";
 
-export const Banner = () => {
+export const Home = () => {
   return (
     <section
       id='home'
@@ -18,7 +18,9 @@ export const Banner = () => {
           Hola,
           <TypeIt className='text-rose-500'> soy JuperDev </TypeIt>
         </h2>
-        <p>Desarrollador Front-End</p>
+        <p className='text-xl sm:text-2xl xl:text-3xl font-thin'>
+          Desarrollador Front-End
+        </p>
         <div className='flex gap-2'>
           <a
             href='https://www.linkedin.com/in/juan-p%C3%A9rez-p%C3%A9rez-3a9230252/'
@@ -28,7 +30,11 @@ export const Banner = () => {
             <i className='ri-linkedin-box-line cursor-pointer'></i>
           </a>
 
-          <a href='https://github.com/JuPerDev' className='text-3xl'>
+          <a
+            href='https://github.com/JuPerDev'
+            target='_blank'
+            className='text-3xl'
+          >
             <i className='ri-github-fill'></i>
           </a>
 
@@ -40,7 +46,7 @@ export const Banner = () => {
             <i className='ri-file-download-line'></i>
           </a>
 
-          <a href='' className='text-3xl'>
+          <a href='#footer' className='text-3xl'>
             <i className='ri-mail-line'></i>
           </a>
         </div>

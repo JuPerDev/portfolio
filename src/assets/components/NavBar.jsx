@@ -1,33 +1,86 @@
+import { useState, useEffect, useRef } from "react";
 import { ChangeTheme } from "./ChangeTheme";
 
 export const NavBar = () => {
-  const handleScroll = (sectionID) => {
-    const targetSection = document.querySelector(sectionID);
+  const [activeSection, setActiveSection] = useState("#home");
+  const sectionsRef = useRef({});
 
-    targetSection.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    const sections = ["home", "about_me", "skills", "projects", "footer"];
 
-    window.history.pushState(null, null, " ");
-  };
+    sections.forEach((section) => {
+      sectionsRef.current[section] = document.getElementById(section);
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      { threshold: 0.5 } // Se activa cuando el 50% de la sección es visible
+    );
+
+    sections.forEach((section) => {
+      if (sectionsRef.current[section]) {
+        observer.observe(sectionsRef.current[section]);
+      }
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (sectionsRef.current[section]) {
+          observer.unobserve(sectionsRef.current[section]);
+        }
+      });
+    };
+  }, []);
 
   return (
     <div className='fixed bottom-2 left-0 right-0 mx-auto'>
       <nav>
-        <div className='min-w-[300px] max-w-[300px] flex items-center justify-center gap-2  px-4 py-1 rounded-full bg-slate-500/15 backdrop-blur-sm mx-auto'>
+        <div className='min-w-[300px] max-w-[300px] flex items-center justify-center gap-2 px-4 py-1 rounded-full bg-slate-500/15 backdrop-blur-sm mx-auto'>
           <a
             href='#home'
-            className='text-3xl p-1'
-            onClick={() => handleScroll("#home")}
+            className={`text-3xl p-1 ${
+              activeSection === "#home" ? "text-rose-500" : ""
+            }`}
           >
             <i className='ri-home-line'></i>
           </a>
-          <a href='#about_me' className='text-3xl p-1'>
+          <a
+            href='#about_me'
+            className={`text-3xl p-1 ${
+              activeSection === "#about_me" ? "text-rose-500" : ""
+            }`}
+          >
             <i className='ri-user-line'></i>
           </a>
-          <a href='#skills' className='text-3xl p-1'>
+          <a
+            href='#skills'
+            className={`text-3xl p-1 ${
+              activeSection === "#skills" ? "text-rose-500" : ""
+            }`}
+          >
             <i className='ri-file-unknow-line'></i>
           </a>
-          <a href='#projects' className='text-3xl p-1'>
+          <a
+            href='#projects'
+            className={`text-3xl p-1 ${
+              activeSection === "#projects" ? "text-rose-500" : ""
+            }`}
+          >
             <i className='ri-terminal-box-line'></i>
+          </a>
+          <a
+            href='#footer'
+            className={`text-3xl p-1 ${
+              activeSection === "#footer" ? "text-rose-500" : ""
+            }`}
+          >
+            <i class='ri-mail-line'></i>
           </a>
           <ChangeTheme />
         </div>
