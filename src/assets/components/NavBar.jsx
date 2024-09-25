@@ -80,7 +80,7 @@ export const NavBar = () => {
               activeSection === "#footer" ? "text-rose-500" : ""
             }`}
           >
-            <i class='ri-mail-line'></i>
+            <i className='ri-mail-line'></i>
           </a>
           <ChangeTheme />
         </div>

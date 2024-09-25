@@ -4,12 +4,12 @@ export const AboutMe = () => {
   return (
     <section
       id='about_me'
-      className='overflow-hidden sm:col-span-3 flex flex-col justify-center items-center mb-10 h-screen px-6'
+      className='sm:col-span-3 flex flex-col justify-center items-center mb-10 h-screen px-6'
     >
-      <article>
-        <h2 className='text-center font-extralight text-5xl md:text-7xl text-neutral-700 dark:text-slate-50 mb-10'>
-          Sobre <span className='text-rose-500'>Mí</span>
-        </h2>
+      <h2 className='text-center font-extralight text-5xl md:text-7xl text-neutral-700 dark:text-slate-50 mb-10'>
+        Sobre <span className='text-rose-500'>Mí</span>
+      </h2>
+      <article className='overflow-auto mb-20'>
         <p className='font-thin md:text-2xl mb-6'>
           Mi nombre es Juan Enrique Pérez, soy un apasionado de la tecnología,
           especialmente del desarrollo FrontEnd.

@@ -4,12 +4,12 @@ export const Projects = () => {
   return (
     <section
       id='projects'
-      className='h-screen pt-4 m:pt-0 sm:col-span-3 flex flex-col justify-center items-center mb-10 px-6'
+      className=' sm:col-span-3 flex flex-col justify-center items-center h-screen min-h-[100vh] px-6 py-4'
     >
       <h2 className='text-center font-extralight text-5xl md:text-7xl text-neutral-700 dark:text-slate-50 mb-10 '>
         Proyectos<span className='text-rose-500'> Realizados</span>
       </h2>
-      <div className='overflow-y-scroll xl:overflow-hidden mb-10 flex flex-wrap justify-around gap-1 gap-y-6'>
+      <div className='overflow-y-auto xl:overflow-hidden w-full mb-16 flex flex-wrap justify-around gap-1 gap-y-6'>
         <ProjectCard
           url='https://www.pascalinapapeleria.cl/'
           title='Pascalina Papelería'
