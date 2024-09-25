@@ -5,7 +5,7 @@ export const Footer = () => {
         <h2 className='text-center font-extralight text-5xl md:text-7xl text-neutral-700 dark:text-slate-50 mb-10 '>
           Conta<span className='text-rose-500'>ctame</span>
         </h2>
-        <div className='w-full overflow-auto'>
+        <div className='w-full overflow-auto touch-pan-y'>
           <form
             action='#'
             className='space-y-8 flex flex-col justify-center items-stretch'

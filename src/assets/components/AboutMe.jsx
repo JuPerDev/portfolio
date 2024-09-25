@@ -7,7 +7,7 @@ export const AboutMe = () => {
         <h2 className='text-center font-extralight text-5xl md:text-7xl text-neutral-700 dark:text-slate-50 mb-10'>
           Sobre <span className='text-rose-500'>Mí</span>
         </h2>
-        <article className='scroll_color overflow-auto'>
+        <article className='scroll_color overflow-auto touch-pan-y'>
           <p className='font-thin md:text-2xl mb-6'>
             Mi nombre es Juan Enrique Pérez, soy un apasionado de la tecnología,
             especialmente del desarrollo FrontEnd.
