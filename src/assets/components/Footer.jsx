@@ -1,4 +1,7 @@
 export const Footer = () => {
+  const onSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
     <section id='footer' className='sm:col-span-3 h-screen pt-4 sm:pt-0'>
       <div className='h-full pb-[60px] flex flex-col justify-center items-center px-6'>
@@ -10,6 +13,7 @@ export const Footer = () => {
             action='https://formsubmit.co/juan.eperez88@gmail.com'
             method='POST'
             className='space-y-8 flex flex-col justify-center items-stretch'
+            onSubmit={onSubmit}
           >
             <div>
               <label
