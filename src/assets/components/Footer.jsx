@@ -1,12 +1,32 @@
+import { div } from "framer-motion/client";
 import { useState } from "react";
 
 export const Footer = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const onSubmit = (event) => {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
     event.preventDefault();
-    setSubmitted(true);
-    event.target.submit();
+    setResult("Enviando....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "08c18f58-d2b5-4d27-a046-cfb35c6418a8");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Formulario enviado!");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
   };
+
   return (
     <section id='footer' className='sm:col-span-3 h-screen pt-4 sm:pt-0'>
       <div className='h-full pb-[60px] flex flex-col justify-center items-center px-6'>
@@ -14,14 +34,8 @@ export const Footer = () => {
           Conta<span className='text-rose-500'>ctame</span>
         </h2>
         <div className='w-full overflow-auto touch-pan-y'>
-          {submitted ? (
-            <div className='text-center text-rose-500'>
-              <p>¡Tu mensaje ha sido enviado con éxito!</p>
-            </div>
-          ) : (
+          {result === "" ? (
             <form
-              action='https://formsubmit.co/juan.eperez88@gmail.com'
-              method='POST'
               className='space-y-8 flex flex-col justify-center items-stretch'
               onSubmit={onSubmit}
             >
@@ -82,12 +96,14 @@ export const Footer = () => {
               </div>
               <input
                 type='hidden'
-                name='_next'
-                value='https://juperdev.com/#footer'
-              />
-
-              <input type='hidden' name='_captcha' value='false' />
+                name='access_key'
+                value='08c18f58-d2b5-4d27-a046-cfb35c6418a8'
+              ></input>
             </form>
+          ) : (
+            <h3 className='text-center font-extralight text-3xl md:text-4xl text-neutral-700 dark:text-slate-50 mb-10'>
+              Mensaje enviado!
+            </h3>
           )}
 
           <h3 className='text-center mt-10 mb-20'>
