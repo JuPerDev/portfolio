@@ -16,6 +16,11 @@ html.dark {
   color: #f8fafc; /* texto claro */
 }
 
+input,
+textarea {
+  font-size: 16px;
+}
+
 p {
   margin-bottom: 0.5rem;
 }
