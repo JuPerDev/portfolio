@@ -27,9 +27,6 @@ export const Skills = () => {
               <Icon icon='devicon:postgresql' className='w-12 h-12' />
             </li>
             <li>
-              <Icon icon='devicon:git' className='w-12 h-12' />
-            </li>
-            <li>
               <Icon icon='ion:logo-github' className='w-12 h-12' />
             </li>
             <li>
