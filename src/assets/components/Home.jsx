@@ -6,7 +6,7 @@ import { useLanguage } from "../contexts/LangContext.jsx";
 export const Home = () => {
   const { language } = useLanguage();
   return (
-    <section id='home' className='h-screen '>
+    <section id='home' className='h-lvh pb-20 md:pb-0 section_port'>
       <div className='h-full pb-[60px] flex flex-col md:flex-row-reverse sm:col-span-3 justify-center items-center gap-8 md:justify-evenly'>
         <img
           src={picPerfil}
@@ -16,7 +16,7 @@ export const Home = () => {
         <div className='flex flex-col justify-center  md:items-start items-center'>
           {language === "es" ? (
             <div>
-              <h2 className='text-center font-extralight md:text-left text-4xl xl:text-7xl xl:w-[700px] text-neutral-700 dark:text-slate-50 mb-2 md:w-[490px]'>
+              <h2 className='text-center font-extralight md:text-left text-4xl xl:text-6xl xl:w-[700px] text-neutral-700 dark:text-slate-50 mb-2 md:w-[490px]'>
                 Hola,
                 <TypeIt key={language} className='text-rose-500'>
                   {" "}
@@ -29,7 +29,7 @@ export const Home = () => {
             </div>
           ) : (
             <div>
-              <h2 className='text-center font-extralight md:text-left text-4xl xl:text-7xl xl:w-[700px] text-neutral-700 dark:text-slate-50 mb-2 md:w-[490px]'>
+              <h2 className='text-center font-extralight md:text-left text-4xl xl:text-6xl xl:w-[700px] text-neutral-700 dark:text-slate-50 mb-2 md:w-[490px]'>
                 Hello,
                 <TypeIt key={language} className='text-rose-500'>
                   {" "}

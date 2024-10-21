@@ -29,7 +29,10 @@ export const Footer = () => {
   };
   const content =
     language === "es" ? (
-      <section id='footer' className='sm:col-span-3 h-screen pt-4 sm:pt-0'>
+      <section
+        id='footer'
+        className='section_port sm:col-span-3 h-screen pt-4 sm:pt-0'
+      >
         <div className='h-full pb-[60px] flex flex-col justify-center items-center px-6'>
           <h2 className='text-center font-extralight text-5xl md:text-7xl text-neutral-700 dark:text-slate-50 mb-10 '>
             Conta<span className='text-rose-500'>ctame</span>
@@ -133,7 +136,10 @@ export const Footer = () => {
         </div>
       </section>
     ) : (
-      <section id='footer' className='sm:col-span-3 h-screen pt-4 sm:pt-0'>
+      <section
+        id='footer'
+        className='section_port sm:col-span-3 h-screen pt-4 sm:pt-0'
+      >
         <div className='h-full pb-[60px] flex flex-col justify-center items-center px-6'>
           <h2 className='text-center font-extralight text-5xl md:text-7xl text-neutral-700 dark:text-slate-50 mb-10 '>
             Conta<span className='text-rose-500'>ct Me</span>

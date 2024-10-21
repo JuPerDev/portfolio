@@ -15,7 +15,10 @@ export const Skills = () => {
   const skills_backend = ["mysql", "mongodb", "nodejs", "express"];
   const skills_tools = ["git", "github", "postman", "figma"];
   return (
-    <section id='skills' className='sm:col-span-3 h-screen'>
+    <section
+      id='skills'
+      className='section_port sm:col-span-3 h-lvh pb-20 md:pb-0'
+    >
       <div className='h-full pb-[60px] flex flex-col justify-center items-center px-6'>
         {language === "es" ? (
           <h2 className='text-center  font-light  text-3xl sm:text-5xl text-neutral-700 dark:text-slate-50 mb-1 md:mb-10 '>

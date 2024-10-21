@@ -3,17 +3,64 @@
 @tailwind components;
 @tailwind utilities;
 
+@-webkit-keyframes bg-scrolling-reverse {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -50px 0;
+  }
+}
+
+@-moz-keyframes bg-scrolling-reverse {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -50px 0;
+  }
+}
+
+@-o-keyframes bg-scrolling-reverse {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -50px 0;
+  }
+}
+
+@keyframes bg-scrolling-reverse {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -50px 0;
+  }
+}
+
 html {
-  background-color: #fff;
-  transition: background-color 0.3s, color 0.3s;
+  background: url("/square.svg") repeat;
+  animation: bg-scrolling-reverse 2s linear infinite;
+  background-size: 50px 50px;
   scroll-behavior: smooth;
-  overflow: hidden;
-  touch-action: none;
+  background-color: #f8fafc;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 html.dark {
-  background-color: #171717; /* color oscuro */
-  color: #f8fafc; /* texto claro */
+  background-color: #171717;
+  color: #f8fafc;
+}
+
+.section_port {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input,
@@ -26,5 +73,6 @@ p {
 }
 
 .scroll_color {
-  scrollbar-color: #f43f5e rgba(255, 255, 255, 0);
+  scrollbar-color: #f43f5e;
+  scrollbar-width: thin;
 }
