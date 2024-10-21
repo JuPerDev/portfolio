@@ -14,7 +14,11 @@ export const Projects = () => {
             title='Pascalina Papelería'
             img='pascalinapapeleria.png'
             description='imagen proyecto web pascalina papelería.'
-            tecnologies={["skill-icons:wordpress", "devicon:woocommerce"]}
+            tecnologies={[
+              "skill-icons:wordpress",
+              "devicon:woocommerce",
+              "devicon:php",
+            ]}
           />
           <ProjectCard
             url='https://www.pascalinapapeleria.cl/'

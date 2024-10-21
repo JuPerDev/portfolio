@@ -10,7 +10,7 @@ export const ProjectCard = ({ url, title, img, description, tecnologies }) => {
           className='w-[200px] rounded-2xl'
         />
         <h4 className='font-extralight'>Tecnologías Utilizadas</h4>
-        <ul className='flex gap-4 font-extralight bg-neutral-300/15 p-2 rounded-full'>
+        <ul className='flex gap-4 font-extralight bg-neutral-300/15 min-w-16 py-2 px-4 rounded-lg'>
           {tecnologies.map((elem, index) => {
             return (
               <li key={index}>
