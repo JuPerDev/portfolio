@@ -1,8 +1,10 @@
 import picPerfil from "/img/foto_perfil.jpeg";
 import TypeIt from "typeit-react";
 import curriculum from "../downloads/curriculum.pdf";
+import { useLanguage } from "../contexts/LangContext.jsx";
 
 export const Home = () => {
+  const { language } = useLanguage();
   return (
     <section id='home' className='h-screen '>
       <div className='h-full pb-[60px] flex flex-col md:flex-row-reverse sm:col-span-3 justify-center items-center gap-8 md:justify-evenly'>
@@ -12,13 +14,34 @@ export const Home = () => {
           className='rounded-full w-64 h-64 object-cover'
         />
         <div className='flex flex-col justify-center  md:items-start items-center'>
-          <h2 className='text-center font-extralight md:text-left text-4xl xl:text-7xl xl:w-[700px] text-neutral-700 dark:text-slate-50 mb-2 md:w-[490px]'>
-            Hola,
-            <TypeIt className='text-rose-500'> soy JuperDev </TypeIt>
-          </h2>
-          <p className='text-xl sm:text-2xl xl:text-3xl font-thin'>
-            Desarrollador Front-End
-          </p>
+          {language === "es" ? (
+            <div>
+              <h2 className='text-center font-extralight md:text-left text-4xl xl:text-7xl xl:w-[700px] text-neutral-700 dark:text-slate-50 mb-2 md:w-[490px]'>
+                Hola,
+                <TypeIt key={language} className='text-rose-500'>
+                  {" "}
+                  soy JuperDev{" "}
+                </TypeIt>
+              </h2>
+              <p className='text-xl sm:text-2xl xl:text-3xl font-thin'>
+                Desarrollador Front-End
+              </p>
+            </div>
+          ) : (
+            <div>
+              <h2 className='text-center font-extralight md:text-left text-4xl xl:text-7xl xl:w-[700px] text-neutral-700 dark:text-slate-50 mb-2 md:w-[490px]'>
+                Hello,
+                <TypeIt key={language} className='text-rose-500'>
+                  {" "}
+                  I am JuperDev{" "}
+                </TypeIt>
+              </h2>
+              <p className='text-xl sm:text-2xl xl:text-3xl font-thin'>
+                Front-End Developer
+              </p>
+            </div>
+          )}
+
           <div className='flex gap-2'>
             <a
               href='https://www.linkedin.com/in/juan-p%C3%A9rez-p%C3%A9rez-3a9230252/'

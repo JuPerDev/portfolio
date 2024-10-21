@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ChangeTheme } from "./ChangeTheme";
+import { LanguageSelector } from "./LanguageSelector";
 
 export const NavBar = () => {
   const [activeSection, setActiveSection] = useState("#home");
@@ -39,9 +40,9 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <div className='fixed bottom-2 left-0 right-0 mx-auto'>
+    <div className='fixed bottom-0 left-0 right-0 mx-auto'>
       <nav>
-        <div className='min-w-[300px] max-w-[300px] flex items-center justify-center gap-2 px-4 py-1 rounded-full bg-slate-500/15 backdrop-blur-sm mx-auto'>
+        <div className='min-w-[340px] max-w-[300px] flex items-center justify-center gap-2 px-4 py-1 rounded-t-3xl bg-slate-500/15 backdrop-blur-sm mx-auto'>
           <a
             href='#home'
             className={`text-3xl p-1 ${
@@ -83,6 +84,7 @@ export const NavBar = () => {
             <i className='ri-mail-line'></i>
           </a>
           <ChangeTheme />
+          <LanguageSelector />
         </div>
       </nav>
     </div>
