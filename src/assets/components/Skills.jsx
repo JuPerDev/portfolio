@@ -32,7 +32,7 @@ export const Skills = () => {
           </h2>
         )}
         <article className='flex justify-center items-center gap-8 py-2 px-4 rounded-xl flex-wrap'>
-          <div className='flex flex-col w-[350px] md:w-[250px] h-[170px] md:h-[500px] gap-2 py-2 px-4 rounded-xl ring-2 bg-slate-50/10  ring-rose-500'>
+          <div className='flex flex-col w-[350px] md:w-[250px] h-[170px] md:h-[500px] gap-2 py-2 px-4 rounded-xl ring-2 bg-slate-50/10  ring-slate-500'>
             <h2 className='md:h-[80px] text-2xl text-center mb-2'>
               {language === "es"
                 ? "Tecnologías Front-End"
@@ -58,7 +58,7 @@ export const Skills = () => {
               })}
             </ul>
           </div>
-          <div className='flex flex-col w-[350px] md:w-[250px] h-[150px] md:h-[500px] gap-2 py-2 px-4 rounded-xl ring-2 bg-slate-50/10  ring-rose-500'>
+          <div className='flex flex-col w-[350px] md:w-[250px] h-[150px] md:h-[500px] gap-2 py-2 px-4 rounded-xl ring-2 bg-slate-50/10  ring-slate-500'>
             <h2 className='md:h-[80px] text-2xl text-center mb-2'>
               {language === "es"
                 ? "Tecnologías Back-End"
@@ -77,7 +77,7 @@ export const Skills = () => {
               })}
             </ul>
           </div>
-          <div className='flex flex-col w-[350px] md:w-[250px] h-[120px] md:h-[500px] gap-2 py-2 px-4 rounded-xl ring-2 bg-slate-50/10  ring-rose-500'>
+          <div className='flex flex-col w-[350px] md:w-[250px] h-[120px] md:h-[500px] gap-2 py-2 px-4 rounded-xl ring-2 bg-slate-50/10  ring-slate-500'>
             <h2 className='md:h-[80px] text-2xl text-center mb-2'>
               {language === "es" ? "Herramientas" : "Tools"}
             </h2>
