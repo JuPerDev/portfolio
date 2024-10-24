@@ -1,4 +1,4 @@
-import picPerfil from "/img/foto_perfil.jpeg";
+import picPerfil from "/img/foto_perfil.webp";
 import TypeIt from "typeit-react";
 import curriculum from "../downloads/curriculum.pdf";
 import { useLanguage } from "../contexts/LangContext.jsx";
