@@ -6,6 +6,7 @@ export const Skills = () => {
     "html5",
     "css3",
     "javascript",
+    "typescript",
     "react",
     "tailwindcss",
     "wordpress",
